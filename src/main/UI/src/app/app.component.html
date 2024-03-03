@@ -22,9 +22,10 @@
 <main id="wrapper">
   <div class="scene" id="welcome">
     <article class="content">
-
- 
-
+      <div>
+        <h2>{{ welcomeMessageEnglish | async}}</h2>
+        <h2>{{ welcomeMessageFrench | async}}</h2>
+      </div>
       <div class="row">
         <div class=""col-12>
           <div class="gallery">
@@ -58,7 +59,7 @@
               </div>
               </form>
 
-        
+
         </div>
       </div>
 
