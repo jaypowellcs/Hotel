@@ -1,6 +1,7 @@
 package edu.wgu.d387_sample_code;
 
 import edu.wgu.d387_sample_code.controller.WelcomeMessage;
+import edu.wgu.d387_sample_code.convertor.TimeConversion;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -29,5 +30,10 @@ public class D387SampleCodeApplication {
 		WelcomeMessage welcomeMessageFrench = new WelcomeMessage(Locale.CANADA_FRENCH);
 		Thread frenchThread = new Thread(welcomeMessageFrench);
 		frenchThread.start();
+
+		TimeConversion newTime = new TimeConversion();
+		Thread timeThread = new Thread(newTime);
+		timeThread.start();
+
 	}
 }

@@ -15,6 +15,10 @@
     <nav id="nav" style="position: relative; top: 0; left: 0; bottom: auto; right: auto; width: 100%;">
       <div class="navbar">
         <div class="brand"><a href="/#welcome">Landon <span>Hotel</span></a></div>
+        <div>
+          <h2>{{ welcomeMessageEnglish | async}}</h2>
+          <h2>{{ welcomeMessageFrench | async}}</h2>
+        </div>
       </div><!-- navbar -->
     </nav>
   </div>
@@ -23,8 +27,7 @@
   <div class="scene" id="welcome">
     <article class="content">
       <div>
-        <h2>{{ welcomeMessageEnglish | async}}</h2>
-        <h2>{{ welcomeMessageFrench | async}}</h2>
+        <h2> Join us for an online live presentation held at the London Hotel at {{convertedTime | async}}</h2>
       </div>
       <div class="row">
         <div class=""col-12>
@@ -35,6 +38,8 @@
             <img src="assets/images/intro_attractions.jpg" alt="Intro Gallery Attractions Sample Pictures">
             <img class="hidesm" src="assets/images/intro_wedding.jpg" alt="Intro Gallery Dining Sample Pictures">
           </div>
+
+
           <h1>Book a Room</h1>
           <form class="form-horizontal" [formGroup]="roomsearch"
           (ngSubmit)="onSubmit(roomsearch)">

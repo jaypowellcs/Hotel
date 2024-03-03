@@ -17,6 +17,7 @@ export class AppComponent implements OnInit{
 
   welcomeMessageEnglish!: Observable<string>
   welcomeMessageFrench!: Observable<string>
+  convertedTime!: Observable<string>
 
   constructor(private httpClient:HttpClient){}
 
@@ -38,7 +39,7 @@ export class AppComponent implements OnInit{
 
       this.welcomeMessageEnglish = this.httpClient.get(this.baseURL + "/welcome/?lang=en-US", {responseType:'text' });
       this.welcomeMessageFrench = this.httpClient.get(this.baseURL + "/welcome/?lang=fr-CA", {responseType:'text' });
-
+      this.convertedTime = this.httpClient.get('http://localhost:8080/api/time/convert', {responseType: 'text'})
 
       this.roomsearch= new FormGroup({
         checkin: new FormControl(' '),
