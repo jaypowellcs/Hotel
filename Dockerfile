@@ -1,6 +1,6 @@
 FROM openjdk:21
 
-COPY target/D387_sample_code-0.0.2-SNAPSHOT.jar target/D387_sample_code-0.0.2-SNAPSHOT.jar.original
+COPY target/D387_sample_code-0.0.2-SNAPSHOT.jar app.jar
 
 WORKDIR /app
 
